@@ -1,0 +1,10 @@
+F:\QuanLySinhVien\Project\QLSV\QLSV\bin\Debug\QLSV.exe.config
+F:\QuanLySinhVien\Project\QLSV\QLSV\bin\Debug\QLSV.exe
+F:\QuanLySinhVien\Project\QLSV\QLSV\bin\Debug\QLSV.pdb
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.csprojResolveAssemblyReference.cache
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.Properties.Resources.resources
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.csproj.GenerateResource.Cache
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.exe
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.pdb
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.TrangChu.resources
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.DangNhap.resources
