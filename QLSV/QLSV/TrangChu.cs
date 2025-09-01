@@ -16,5 +16,17 @@ namespace QLSV
         {
             InitializeComponent();
         }
+
+        private void button_DangXuat_Click(object sender, EventArgs e)
+        {
+            DialogResult D = MessageBox.Show("Bạn có muốn đăng xuất không", "Chú Ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (D == DialogResult.Yes)
+            {
+                this.Close();
+            }
+            else
+            {
+            }
+        }
     }
 }

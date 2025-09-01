@@ -17,52 +17,71 @@ namespace QLSV
         {
             InitializeComponent();
         }
-        private void button1_Click(object sender, EventArgs e)
+
+        private void DangNhap_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button_DangNhap_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LTL2CL3\SQLEXPRESS;Initial Catalog=QuanLySinhVien;Integrated Security=True");
             try
             {
                 conn.Open();
-                string tk = textBoxTK.Text;
-                string mk = textBoxMK.Text;
+                string tk = textBox_TenTaiKhoan.Text;
+                string mk = textBox_MatKhau.Text;
                 string sql = "SELECT * from DangNhap Where TenTaiKhoan = '" + tk + "'and MatKhau = '" + mk + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader DataReader = cmd.ExecuteReader();
-                if (textBoxMK.Text == "" || textBoxTK.Text == "")
+                if (textBox_MatKhau.Text == "" || textBox_TenTaiKhoan.Text == "")
                 {
-                    MessageBox.Show("Bạn Điền Tài Khoản Và Mật Khẩu Để Đăng Nhập","Thông Báo", MessageBoxButtons.OK,MessageBoxIcon.Question);
+                    MessageBox.Show("Bạn điền tài khoản và mật khẩu để đăng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
                 }
                 else if (DataReader.Read() == true)
                 {
                     this.Hide();
-                    TrangChu TC = new TrangChu();
-                    TC.ShowDialog();
-                    TC = null;
-                    textBoxMK.Text = "";
+                    TrangChu Home = new TrangChu();
+                    Home.ShowDialog();
+                    Home= null;
+                    Home.Text = "";
                     this.Show();
                 }
                 else
-                { 
-                    MessageBox.Show("Tài Khoản Hoặc Mật Khẩu Không Đúng? Vui Lòng Đăng Nhập Lại","Thông Báo", MessageBoxButtons.OK,MessageBoxIcon.Error);
-                    textBoxMK.Text = "";
+                {
+                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng? Vui lòng đăng nhập lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    textBox_MatKhau.Text = "";
                 }
-             }
-             catch (Exception ex)
-             {
-                MessageBox.Show("Lỗi Kết Nối"+ ex ,"Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối" + ex, "Thống Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
-        private void checkBoxHMK_CheckedChanged(object sender, EventArgs e)
+        private void button_Thoat_Click(object sender, EventArgs e)
         {
-            if (checkBoxHMK.Checked)
+            DialogResult D = MessageBox.Show("Bạn Có Thoát Không", "Chú Ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (D == DialogResult.Yes)
             {
-                textBoxMK.UseSystemPasswordChar = false; // Hiện Mật Khẩu
+                this.Close();
             }
-            else 
+            else
             {
-                textBoxMK.UseSystemPasswordChar = true; // Ẩn Mật Khẩu
             }
+        }
+
+        private void checkBox_HMK_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox_HMK.Checked)
+            {
+                textBox_MatKhau.UseSystemPasswordChar = false; // Hiện Mật Khẩu
+            }
+            else
+            {
+                textBox_MatKhau.UseSystemPasswordChar = true; // Ẩn Mật Khẩu
+            }
+
         }
     }
 }
