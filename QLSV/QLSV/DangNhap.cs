@@ -36,7 +36,7 @@ namespace QLSV
                 SqlDataReader DataReader = cmd.ExecuteReader();
                 if (textBox_MatKhau.Text == "" || textBox_TenTaiKhoan.Text == "")
                 {
-                    MessageBox.Show("Bạn điền tài khoản và mật khẩu để đăng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    MessageBox.Show("Bạn điền tài khoản và mật khẩu để đăng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (DataReader.Read() == true)
                 {
@@ -61,13 +61,10 @@ namespace QLSV
 
         private void button_Thoat_Click(object sender, EventArgs e)
         {
-            DialogResult D = MessageBox.Show("Bạn Có Thoát Không", "Chú Ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult D = MessageBox.Show("Bạn có muốn thoát không", "Chú Ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (D == DialogResult.Yes)
             {
                 this.Close();
-            }
-            else
-            {
             }
         }
 
@@ -82,6 +79,18 @@ namespace QLSV
                 textBox_MatKhau.UseSystemPasswordChar = true; // Ẩn Mật Khẩu
             }
 
+        }
+
+        private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            DangKy DK = new DangKy();
+            DK.ShowDialog();
+        }
+
+        private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            QuenMatKhau QMK = new QuenMatKhau();
+            QMK.ShowDialog();
         }
     }
 }
