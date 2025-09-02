@@ -165,10 +165,9 @@ INSERT INTO GiangDay
 INSERT INTO Diem 
 			VALUES('SV01','MH01', '1',8.5,N'Kha');
 INSERT INTO Diem 
-			VALUES('SV01','MH02','1',7.0,N'Trung binh');
-INSERT INTO Diem 
 			VALUES('SV02','MH01','1',9.0,N'Gioi');
 INSERT INTO Diem 
 			VALUES('SV03','MH03','2',6.5,N'Trung binh'); 
+
 
 
