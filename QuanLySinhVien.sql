@@ -127,7 +127,7 @@ INSERT INTO SinhVien
 INSERT INTO SinhVien 
 			VALUES('SV02', N'Nguyen Anh Ngoc', '2005-08-12', N'Nu', N'Kinh', N'Khong', 'LTMT2');
 INSERT INTO SinhVien 
-			VALUES('SV03', N'Nguyen Thanh Tien', '2005-01-15', N'Nam', N'Nghe An', N'HMong', 'CK1');
+			VALUES('SV03', N'Nguyen Thanh Tien', '2005-07-1717', N'Nam', N'Nghe An', N'HMong', 'CK1');
 
 -- 5. Dia chi
 INSERT INTO DiaChi 
@@ -168,6 +168,7 @@ INSERT INTO Diem
 			VALUES('SV02','MH01','1',9.0,N'Gioi');
 INSERT INTO Diem 
 			VALUES('SV03','MH03','2',6.5,N'Trung binh'); 
+
 
 
 
