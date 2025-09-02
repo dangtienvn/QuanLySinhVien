@@ -116,9 +116,10 @@ INSERT INTO Khoa
 INSERT INTO Lop 
 			VALUES('LTMT1', N'Lap trinh may tinh 1', 'CNTT', N'Lop ly thuyet');
 INSERT INTO Lop 
-			VALUES('LTMT2', N'Lap trinh may tinh 2', 'CNTT', N'Lop ly thuyet');
-INSERT INTO Lop 
 			VALUES('CK1', N'Co khi 1', 'CK', N'Lop thuc hanh');
+
+INSERT INTO Lop 
+			VALUES('KT1', N'Ke Toan 1', 'KT', N'Lop ly thuyet');
 
 -- 4. Sinh vien
 INSERT INTO SinhVien 
@@ -148,9 +149,9 @@ INSERT INTO GiangVien
 INSERT INTO MonHoc 
 			VALUES('MH01', N'Co so du lieu', N'Mon chuyen nganh CNTT', 3);
 INSERT INTO MonHoc 
-			VALUES('MH02', N'Ky thuat lap trinh', N'C++ & Python', 4);
+			VALUES('MH02', N'Ky thuat kap rap', N'Mon chuyen nganh', 4);
 INSERT INTO MonHoc 
-			VALUES('MH03', N'Co hoc ly thuyet', N'Mon ky thuat', 3);
+			VALUES('MH03', N'Ke toan doanh nghiep', N'Mon chuyen nganh', 3);
 
 -- 8. Giang day
 INSERT INTO GiangDay 
@@ -169,4 +170,5 @@ INSERT INTO Diem
 			VALUES('SV02','MH01','1',9.0,N'Gioi');
 INSERT INTO Diem 
 			VALUES('SV03','MH03','2',6.5,N'Trung binh'); 
+
 
