@@ -103,7 +103,7 @@ namespace QLSV
 
         private void DangKy_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -119,6 +119,11 @@ namespace QLSV
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DangKy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

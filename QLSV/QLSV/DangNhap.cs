@@ -83,14 +83,23 @@ namespace QLSV
 
         private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide(); // ẩn form đăng nhập
             DangKy DK = new DangKy();
             DK.ShowDialog();
+            this.Show(); // hiện lại khi đóng form đăng ký
         }
 
         private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             QuenMatKhau QMK = new QuenMatKhau();
             QMK.ShowDialog();
+            this.Show(); // hiện lại khi đóng form quen MK
+        }
+
+        private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -66,5 +66,10 @@ namespace QLSV
                 MessageBox.Show("Lỗi kết nối" + ex, "Thống Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void QuenMatKhau_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
