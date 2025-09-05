@@ -18,11 +18,6 @@ namespace QLSV
             InitializeComponent();
         }
 
-        private void DangNhap_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button_DangNhap_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LTL2CL3\SQLEXPRESS;Initial Catalog=QuanLySinhVien;Integrated Security=True");
@@ -95,11 +90,6 @@ namespace QLSV
             QuenMatKhau QMK = new QuenMatKhau();
             QMK.ShowDialog();
             this.Show(); // hiện lại khi đóng form quen MK
-        }
-
-        private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

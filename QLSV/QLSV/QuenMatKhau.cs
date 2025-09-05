@@ -17,16 +17,6 @@ namespace QLSV
         {
             InitializeComponent();
         }
-
-        private void button_TroLai_Click(object sender, EventArgs e)
-        {
-            DialogResult D = MessageBox.Show("Bạn có muốn trở lại không", "Chú Ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (D == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
         private void button_LLMatKhau_Click(object sender, EventArgs e)
         {
             
@@ -65,11 +55,6 @@ namespace QLSV
             {
                 MessageBox.Show("Lỗi kết nối" + ex, "Thống Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void QuenMatKhau_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

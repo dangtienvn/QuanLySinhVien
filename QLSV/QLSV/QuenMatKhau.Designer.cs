@@ -31,7 +31,6 @@
             this.button_LLMatKhau = new System.Windows.Forms.Button();
             this.label_KetQua = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_TroLai = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox_TenTaiKhoan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -40,7 +39,7 @@
             // button_LLMatKhau
             // 
             this.button_LLMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_LLMatKhau.Location = new System.Drawing.Point(48, 293);
+            this.button_LLMatKhau.Location = new System.Drawing.Point(107, 295);
             this.button_LLMatKhau.Name = "button_LLMatKhau";
             this.button_LLMatKhau.Size = new System.Drawing.Size(142, 29);
             this.button_LLMatKhau.TabIndex = 37;
@@ -67,17 +66,6 @@
             this.label1.Size = new System.Drawing.Size(111, 17);
             this.label1.TabIndex = 34;
             this.label1.Text = "Tên Tài Khoản:";
-            // 
-            // button_TroLai
-            // 
-            this.button_TroLai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_TroLai.Location = new System.Drawing.Point(260, 293);
-            this.button_TroLai.Name = "button_TroLai";
-            this.button_TroLai.Size = new System.Drawing.Size(87, 29);
-            this.button_TroLai.TabIndex = 31;
-            this.button_TroLai.Text = "Trở Lại";
-            this.button_TroLai.UseVisualStyleBackColor = true;
-            this.button_TroLai.Click += new System.EventHandler(this.button_TroLai_Click);
             // 
             // pictureBox1
             // 
@@ -106,13 +94,11 @@
             this.Controls.Add(this.button_LLMatKhau);
             this.Controls.Add(this.label_KetQua);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button_TroLai);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox_TenTaiKhoan);
             this.Name = "QuenMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuenMatKhau";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuenMatKhau_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,7 +110,6 @@
         private System.Windows.Forms.Button button_LLMatKhau;
         private System.Windows.Forms.Label label_KetQua;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button_TroLai;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox_TenTaiKhoan;
 

@@ -91,39 +91,5 @@ namespace QLSV
                 }
             }
         }
-
-        private void button_TroLai_Click(object sender, EventArgs e)
-        {
-            DialogResult D = MessageBox.Show("Bạn có muốn trở lại không", "Chú Ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (D == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void DangKy_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DangKy_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }
