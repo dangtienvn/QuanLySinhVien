@@ -38,8 +38,6 @@ namespace QLSV
                     this.Hide();
                     TrangChu Home = new TrangChu();
                     Home.ShowDialog();
-                    Home= null;
-                    Home.Text = "";
                     this.Show();
                 }
                 else

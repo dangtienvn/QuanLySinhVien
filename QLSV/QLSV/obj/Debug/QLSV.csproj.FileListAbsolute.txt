@@ -10,3 +10,4 @@ F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.pdb
 F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.TrangChu.resources
 F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.DangKy.resources
 F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.QuenMatKhau.resources
+F:\QuanLySinhVien\Project\QLSV\QLSV\obj\Debug\QLSV.FormKhoa.resources

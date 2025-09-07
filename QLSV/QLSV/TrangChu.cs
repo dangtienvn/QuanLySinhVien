@@ -29,9 +29,26 @@ namespace QLSV
             }
         }
 
-        private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        private void OpenChildForm(Form childForm)
         {
-            Application.Exit();
+            // Xóa form cũ trong panel
+            panelContainer.Controls.Clear();
+
+            // Cấu hình để form con nằm gọn trong panel
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            // Thêm vào panel
+            panelContainer.Controls.Add(childForm);
+            childForm.Show();
+        }
+
+
+        private void khoaToolStripMenuItem_Click_(object sender, EventArgs e)
+        {
+            FormKhoa f = new FormKhoa();
+            OpenChildForm(f);
         }
     }
 }

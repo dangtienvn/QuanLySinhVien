@@ -6,7 +6,6 @@ GO
 
 -- 1. Đăng Nhập 
 CREATE TABLE DangNhap (
-  MaTK NVARCHAR(10) PRIMARY KEY, 
   TenTaiKhoan NVARCHAR(50),
   MatKhau NVARCHAR(50)
 );
