@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\QuanLySinhVien",
-    "\\QuanLySinhVien\\GUI"
+    "\\GUI"
   ],
-  "SelectedNode": "\\QuanLySinhVien\\GUI\\fBangDiemSinVien.resx",
+  "SelectedNode": "\\GUI\\fBangDiemSinVien.Designer.cs",
   "PreviewInSolutionExplorer": false
 }
