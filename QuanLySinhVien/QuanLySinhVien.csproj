@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BLL_TaiKhoan.cs" />
+    <Compile Include="DAL\DAL_TaiKhoan.cs" />
+    <Compile Include="DAL\KetNoi.cs" />
     <Compile Include="GUI\fBangDiemSinVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +115,7 @@
     <Compile Include="GUI\fThongTinChiTiet.Designer.cs">
       <DependentUpon>fThongTinChiTiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="HeThong.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fBangDiemSinVien.resx">
@@ -170,10 +174,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BLL\" />
-    <Folder Include="DAL\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\hello-2488.gif" />
   </ItemGroup>
