@@ -95,10 +95,11 @@
             this.Controls.Add(this.textBox_MatKhauCu);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fQuenMatKhau";
             this.ShowIcon = false;
-            this.Text = "fQuenMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Quên Mât Khẩu";
             this.ResumeLayout(false);
             this.PerformLayout();
 
