@@ -57,9 +57,9 @@ namespace QLSV
                     conn.Open();
 
                     // Kiểm tra trùng tên tài khoản
-                    string checkSql = "SELECT COUNT(*) FROM DangNhap WHERE TenTaiKhoan=@TenTaiKhoan";
+                    string checkSql = "SELECT COUNT(*) FROM TaiKhoan WHERE TenDangNhap=@TenDangNhap";
                     SqlCommand checkCmd = new SqlCommand(checkSql, conn);
-                    checkCmd.Parameters.AddWithValue("@TenTaiKhoan", tk);
+                    checkCmd.Parameters.AddWithValue("@TenDangNhap", tk);
                     int count = (int)checkCmd.ExecuteScalar();
 
                     if (count > 0)
@@ -69,9 +69,9 @@ namespace QLSV
                     }
 
                     // Thêm tài khoản mới
-                    string sql = "INSERT INTO DangNhap (TenTaiKhoan, MatKhau)VALUES(@TenTaiKhoan,@MatKhau)";
+                    string sql = "INSERT INTO TaiKhoan (TenDangNhap, MatKhau)VALUES(@TenDangNhap,@MatKhau)";
                     SqlCommand cmd = new SqlCommand(sql, conn);
-                    cmd.Parameters.AddWithValue("@TenTaiKhoan", tk);
+                    cmd.Parameters.AddWithValue("@TenDangNhap", tk);
                     cmd.Parameters.AddWithValue("@MatKhau", mk);
 
                     int rows = cmd.ExecuteNonQuery();

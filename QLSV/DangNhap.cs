@@ -26,7 +26,7 @@ namespace QLSV
                 conn.Open();
                 string tk = textBox_TenTaiKhoan.Text;
                 string mk = textBox_MatKhau.Text;
-                string sql = "SELECT * from DangNhap Where TenTaiKhoan = '" + tk + "'and MatKhau = '" + mk + "'";
+                string sql = "SELECT * from TaiKhoan Where TenDangNhap = '" + tk + "'and MatKhau = '" + mk + "'";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 SqlDataReader DataReader = cmd.ExecuteReader();
                 if (textBox_MatKhau.Text == "" || textBox_TenTaiKhoan.Text == "")

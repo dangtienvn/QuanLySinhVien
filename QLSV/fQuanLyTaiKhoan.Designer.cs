@@ -44,20 +44,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox_ID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView_TaiKhoan = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_TaiKhoan)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_TimKiem
             // 
-            this.button_TimKiem.Location = new System.Drawing.Point(1171, 84);
+            this.button_TimKiem.Location = new System.Drawing.Point(1171, 77);
             this.button_TimKiem.Name = "button_TimKiem";
             this.button_TimKiem.Size = new System.Drawing.Size(109, 37);
             this.button_TimKiem.TabIndex = 25;
@@ -67,7 +67,7 @@
             // 
             // textBox_TimKiem
             // 
-            this.textBox_TimKiem.Location = new System.Drawing.Point(1190, 38);
+            this.textBox_TimKiem.Location = new System.Drawing.Point(1190, 31);
             this.textBox_TimKiem.MaxLength = 255;
             this.textBox_TimKiem.Name = "textBox_TimKiem";
             this.textBox_TimKiem.Size = new System.Drawing.Size(167, 26);
@@ -76,7 +76,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1106, 43);
+            this.label10.Location = new System.Drawing.Point(1106, 36);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 19);
@@ -85,7 +85,7 @@
             // 
             // button_TaiLai
             // 
-            this.button_TaiLai.Location = new System.Drawing.Point(705, 89);
+            this.button_TaiLai.Location = new System.Drawing.Point(705, 82);
             this.button_TaiLai.Name = "button_TaiLai";
             this.button_TaiLai.Size = new System.Drawing.Size(140, 40);
             this.button_TaiLai.TabIndex = 22;
@@ -95,7 +95,7 @@
             // 
             // button_Xoa
             // 
-            this.button_Xoa.Location = new System.Drawing.Point(532, 89);
+            this.button_Xoa.Location = new System.Drawing.Point(532, 82);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(140, 40);
             this.button_Xoa.TabIndex = 21;
@@ -105,7 +105,7 @@
             // 
             // button_Sua
             // 
-            this.button_Sua.Location = new System.Drawing.Point(354, 89);
+            this.button_Sua.Location = new System.Drawing.Point(354, 82);
             this.button_Sua.Name = "button_Sua";
             this.button_Sua.Size = new System.Drawing.Size(140, 40);
             this.button_Sua.TabIndex = 20;
@@ -115,7 +115,7 @@
             // 
             // button_Them
             // 
-            this.button_Them.Location = new System.Drawing.Point(178, 89);
+            this.button_Them.Location = new System.Drawing.Point(178, 82);
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(140, 40);
             this.button_Them.TabIndex = 19;
@@ -140,11 +140,11 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox_ID);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 156);
+            this.panel1.Size = new System.Drawing.Size(1370, 150);
             this.panel1.TabIndex = 2;
             // 
             // comboBox_LoaiTaiKhoan
@@ -153,14 +153,14 @@
             this.comboBox_LoaiTaiKhoan.Items.AddRange(new object[] {
             "Quản lí",
             "Giáo Viên"});
-            this.comboBox_LoaiTaiKhoan.Location = new System.Drawing.Point(842, 36);
+            this.comboBox_LoaiTaiKhoan.Location = new System.Drawing.Point(842, 29);
             this.comboBox_LoaiTaiKhoan.Name = "comboBox_LoaiTaiKhoan";
             this.comboBox_LoaiTaiKhoan.Size = new System.Drawing.Size(146, 27);
             this.comboBox_LoaiTaiKhoan.TabIndex = 3;
             // 
             // textBox_MatKhau
             // 
-            this.textBox_MatKhau.Location = new System.Drawing.Point(523, 37);
+            this.textBox_MatKhau.Location = new System.Drawing.Point(523, 30);
             this.textBox_MatKhau.MaxLength = 255;
             this.textBox_MatKhau.Name = "textBox_MatKhau";
             this.textBox_MatKhau.Size = new System.Drawing.Size(165, 26);
@@ -169,7 +169,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(436, 41);
+            this.label5.Location = new System.Drawing.Point(436, 34);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(80, 19);
@@ -179,7 +179,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(725, 41);
+            this.label4.Location = new System.Drawing.Point(725, 34);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(110, 19);
@@ -188,7 +188,7 @@
             // 
             // textBox_TenDangNhap
             // 
-            this.textBox_TenDangNhap.Location = new System.Drawing.Point(259, 37);
+            this.textBox_TenDangNhap.Location = new System.Drawing.Point(259, 30);
             this.textBox_TenDangNhap.MaxLength = 255;
             this.textBox_TenDangNhap.Name = "textBox_TenDangNhap";
             this.textBox_TenDangNhap.Size = new System.Drawing.Size(137, 26);
@@ -197,7 +197,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 41);
+            this.label3.Location = new System.Drawing.Point(140, 34);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 19);
@@ -207,7 +207,7 @@
             // textBox_ID
             // 
             this.textBox_ID.Enabled = false;
-            this.textBox_ID.Location = new System.Drawing.Point(52, 37);
+            this.textBox_ID.Location = new System.Drawing.Point(52, 30);
             this.textBox_ID.Name = "textBox_ID";
             this.textBox_ID.Size = new System.Drawing.Size(41, 26);
             this.textBox_ID.TabIndex = 0;
@@ -215,22 +215,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 40);
+            this.label1.Location = new System.Drawing.Point(13, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID:";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dataGridView_TaiKhoan);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 156);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1370, 197);
-            this.panel2.TabIndex = 3;
             // 
             // dataGridView_TaiKhoan
             // 
@@ -251,7 +241,7 @@
             this.dataGridView_TaiKhoan.RowHeadersVisible = false;
             this.dataGridView_TaiKhoan.RowTemplate.Height = 30;
             this.dataGridView_TaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_TaiKhoan.Size = new System.Drawing.Size(1370, 197);
+            this.dataGridView_TaiKhoan.Size = new System.Drawing.Size(1370, 204);
             this.dataGridView_TaiKhoan.TabIndex = 1;
             this.dataGridView_TaiKhoan.TabStop = false;
             // 
@@ -283,13 +273,22 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dataGridView_TaiKhoan);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 150);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1370, 204);
+            this.panel2.TabIndex = 3;
+            // 
             // fQuanLyTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 353);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1370, 354);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fQuanLyTaiKhoan";
@@ -298,8 +297,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_TaiKhoan)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -321,12 +320,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox_ID;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView_TaiKhoan;
         private System.Windows.Forms.ComboBox comboBox_LoaiTaiKhoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Panel panel2;
     }
 }

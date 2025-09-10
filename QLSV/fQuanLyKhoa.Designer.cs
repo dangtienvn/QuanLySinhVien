@@ -70,7 +70,7 @@
             this.dataGridView_Khoa.RowHeadersVisible = false;
             this.dataGridView_Khoa.RowTemplate.Height = 30;
             this.dataGridView_Khoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_Khoa.Size = new System.Drawing.Size(1370, 230);
+            this.dataGridView_Khoa.Size = new System.Drawing.Size(1370, 583);
             this.dataGridView_Khoa.TabIndex = 1;
             this.dataGridView_Khoa.TabStop = false;
             // 
@@ -98,16 +98,16 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.dataGridView_Khoa);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 151);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 166);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1370, 230);
+            this.panel2.Size = new System.Drawing.Size(1370, 583);
             this.panel2.TabIndex = 5;
             // 
             // button_TimKiem
             // 
-            this.button_TimKiem.Location = new System.Drawing.Point(1102, 84);
+            this.button_TimKiem.Location = new System.Drawing.Point(1066, 88);
             this.button_TimKiem.Name = "button_TimKiem";
             this.button_TimKiem.Size = new System.Drawing.Size(109, 37);
             this.button_TimKiem.TabIndex = 25;
@@ -117,7 +117,7 @@
             // 
             // textBox_TimKiem
             // 
-            this.textBox_TimKiem.Location = new System.Drawing.Point(1102, 40);
+            this.textBox_TimKiem.Location = new System.Drawing.Point(1066, 44);
             this.textBox_TimKiem.MaxLength = 255;
             this.textBox_TimKiem.Name = "textBox_TimKiem";
             this.textBox_TimKiem.Size = new System.Drawing.Size(167, 26);
@@ -126,7 +126,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1018, 45);
+            this.label10.Location = new System.Drawing.Point(982, 49);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 19);
@@ -135,7 +135,7 @@
             // 
             // button_TaiLai
             // 
-            this.button_TaiLai.Location = new System.Drawing.Point(705, 89);
+            this.button_TaiLai.Location = new System.Drawing.Point(669, 93);
             this.button_TaiLai.Name = "button_TaiLai";
             this.button_TaiLai.Size = new System.Drawing.Size(140, 40);
             this.button_TaiLai.TabIndex = 22;
@@ -145,7 +145,7 @@
             // 
             // button_Xoa
             // 
-            this.button_Xoa.Location = new System.Drawing.Point(532, 89);
+            this.button_Xoa.Location = new System.Drawing.Point(496, 93);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(140, 40);
             this.button_Xoa.TabIndex = 21;
@@ -155,7 +155,7 @@
             // 
             // button_Sua
             // 
-            this.button_Sua.Location = new System.Drawing.Point(354, 89);
+            this.button_Sua.Location = new System.Drawing.Point(318, 93);
             this.button_Sua.Name = "button_Sua";
             this.button_Sua.Size = new System.Drawing.Size(140, 40);
             this.button_Sua.TabIndex = 20;
@@ -165,7 +165,7 @@
             // 
             // button_Them
             // 
-            this.button_Them.Location = new System.Drawing.Point(178, 89);
+            this.button_Them.Location = new System.Drawing.Point(142, 93);
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(140, 40);
             this.button_Them.TabIndex = 19;
@@ -175,7 +175,7 @@
             // 
             // textBox_TenKhoa
             // 
-            this.textBox_TenKhoa.Location = new System.Drawing.Point(680, 40);
+            this.textBox_TenKhoa.Location = new System.Drawing.Point(644, 44);
             this.textBox_TenKhoa.MaxLength = 255;
             this.textBox_TenKhoa.Name = "textBox_TenKhoa";
             this.textBox_TenKhoa.Size = new System.Drawing.Size(165, 26);
@@ -183,7 +183,7 @@
             // 
             // textBox_MaKhoa
             // 
-            this.textBox_MaKhoa.Location = new System.Drawing.Point(382, 41);
+            this.textBox_MaKhoa.Location = new System.Drawing.Point(346, 45);
             this.textBox_MaKhoa.MaxLength = 255;
             this.textBox_MaKhoa.Name = "textBox_MaKhoa";
             this.textBox_MaKhoa.Size = new System.Drawing.Size(171, 26);
@@ -192,7 +192,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(300, 44);
+            this.label3.Location = new System.Drawing.Point(264, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 19);
@@ -202,7 +202,7 @@
             // textBox_ID
             // 
             this.textBox_ID.Enabled = false;
-            this.textBox_ID.Location = new System.Drawing.Point(213, 41);
+            this.textBox_ID.Location = new System.Drawing.Point(177, 45);
             this.textBox_ID.Name = "textBox_ID";
             this.textBox_ID.Size = new System.Drawing.Size(41, 26);
             this.textBox_ID.TabIndex = 0;
@@ -210,7 +210,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(174, 44);
+            this.label1.Location = new System.Drawing.Point(138, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(32, 19);
@@ -219,30 +219,30 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button_TimKiem);
-            this.panel1.Controls.Add(this.textBox_TimKiem);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.button_TaiLai);
-            this.panel1.Controls.Add(this.button_Xoa);
-            this.panel1.Controls.Add(this.button_Sua);
-            this.panel1.Controls.Add(this.button_Them);
             this.panel1.Controls.Add(this.textBox_TenKhoa);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox_MaKhoa);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox_ID);
+            this.panel1.Controls.Add(this.button_TimKiem);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Controls.Add(this.button_Them);
+            this.panel1.Controls.Add(this.textBox_TimKiem);
+            this.panel1.Controls.Add(this.button_Sua);
+            this.panel1.Controls.Add(this.textBox_ID);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.button_Xoa);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox_MaKhoa);
+            this.panel1.Controls.Add(this.button_TaiLai);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 381);
+            this.panel1.Size = new System.Drawing.Size(1370, 166);
             this.panel1.TabIndex = 4;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(596, 44);
+            this.label5.Location = new System.Drawing.Point(560, 48);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 19);
@@ -253,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1370, 381);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
