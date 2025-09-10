@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4FF90C9-5443-46C0-B7B4-A23A648C61D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLSV</RootNamespace>
+    <AssemblyName>QLSV</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangKy.Designer.cs">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DangNhap.Designer.cs">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="fBangDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fBangDiem.Designer.cs">
+      <DependentUpon>fBangDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyDiem.Designer.cs">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyGiaoVien.Designer.cs">
+      <DependentUpon>fQuanLyGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyKhoa.Designer.cs">
+      <DependentUpon>fQuanLyKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyLop.Designer.cs">
+      <DependentUpon>fQuanLyLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyMonHoc.Designer.cs">
+      <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLySinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLySinhVien.Designer.cs">
+      <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fQuenMatKhau.Designer.cs">
+      <DependentUpon>fQuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fThongTinChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fThongTinChiTiet.Designer.cs">
+      <DependentUpon>fThongTinChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuenMatKhau.Designer.cs">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DangKy.resx">
+      <DependentUpon>DangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DangNhap.resx">
+      <DependentUpon>DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fBangDiem.resx">
+      <DependentUpon>fBangDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyDiem.resx">
+      <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyGiaoVien.resx">
+      <DependentUpon>fQuanLyGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyKhoa.resx">
+      <DependentUpon>fQuanLyKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyLop.resx">
+      <DependentUpon>fQuanLyLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyMonHoc.resx">
+      <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLySinhVien.resx">
+      <DependentUpon>fQuanLySinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuanLyTaiKhoan.resx">
+      <DependentUpon>fQuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fQuenMatKhau.resx">
+      <DependentUpon>fQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fThongTinChiTiet.resx">
+      <DependentUpon>fThongTinChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuenMatKhau.resx">
+      <DependentUpon>QuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot 2025-09-01 052139.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-in-35497_1920.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-2385_256.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favpng_b734dad2c8e121baacbf0c87ae9d8a7c.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Password.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ChatGPT Image 07_33_35 1 thg 9, 2025.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
