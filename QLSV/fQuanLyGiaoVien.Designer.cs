@@ -55,8 +55,6 @@
             this.textBox_TenGiaoVien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox_MaKhoa = new System.Windows.Forms.ComboBox();
@@ -69,7 +67,7 @@
             // radioButton_Nu
             // 
             this.radioButton_Nu.AutoSize = true;
-            this.radioButton_Nu.Location = new System.Drawing.Point(856, 40);
+            this.radioButton_Nu.Location = new System.Drawing.Point(754, 34);
             this.radioButton_Nu.Name = "radioButton_Nu";
             this.radioButton_Nu.Size = new System.Drawing.Size(49, 23);
             this.radioButton_Nu.TabIndex = 5;
@@ -80,7 +78,7 @@
             // 
             this.radioButton_Nam.AutoSize = true;
             this.radioButton_Nam.Checked = true;
-            this.radioButton_Nam.Location = new System.Drawing.Point(802, 40);
+            this.radioButton_Nam.Location = new System.Drawing.Point(700, 34);
             this.radioButton_Nam.Name = "radioButton_Nam";
             this.radioButton_Nam.Size = new System.Drawing.Size(59, 23);
             this.radioButton_Nam.TabIndex = 4;
@@ -91,7 +89,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(723, 42);
+            this.label11.Location = new System.Drawing.Point(621, 36);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 19);
@@ -100,17 +98,18 @@
             // 
             // button_TimKiem
             // 
-            this.button_TimKiem.Location = new System.Drawing.Point(1092, 82);
+            this.button_TimKiem.Location = new System.Drawing.Point(1044, 75);
             this.button_TimKiem.Name = "button_TimKiem";
             this.button_TimKiem.Size = new System.Drawing.Size(109, 37);
             this.button_TimKiem.TabIndex = 25;
             this.button_TimKiem.TabStop = false;
             this.button_TimKiem.Text = "Tìm Kiếm";
             this.button_TimKiem.UseVisualStyleBackColor = true;
+            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
             // 
             // textBox_TimKiem
             // 
-            this.textBox_TimKiem.Location = new System.Drawing.Point(1111, 36);
+            this.textBox_TimKiem.Location = new System.Drawing.Point(1063, 29);
             this.textBox_TimKiem.MaxLength = 255;
             this.textBox_TimKiem.Name = "textBox_TimKiem";
             this.textBox_TimKiem.Size = new System.Drawing.Size(167, 26);
@@ -119,7 +118,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1027, 41);
+            this.label10.Location = new System.Drawing.Point(979, 34);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 19);
@@ -128,43 +127,47 @@
             // 
             // button_TaiLai
             // 
-            this.button_TaiLai.Location = new System.Drawing.Point(719, 130);
+            this.button_TaiLai.Location = new System.Drawing.Point(671, 123);
             this.button_TaiLai.Name = "button_TaiLai";
             this.button_TaiLai.Size = new System.Drawing.Size(140, 40);
             this.button_TaiLai.TabIndex = 22;
             this.button_TaiLai.TabStop = false;
             this.button_TaiLai.Text = "Tải Lại";
             this.button_TaiLai.UseVisualStyleBackColor = true;
+            this.button_TaiLai.Click += new System.EventHandler(this.button_TaiLai_Click);
             // 
             // button_Xoa
             // 
-            this.button_Xoa.Location = new System.Drawing.Point(546, 130);
+            this.button_Xoa.Location = new System.Drawing.Point(498, 123);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(140, 40);
             this.button_Xoa.TabIndex = 21;
             this.button_Xoa.TabStop = false;
             this.button_Xoa.Text = "Xóa";
             this.button_Xoa.UseVisualStyleBackColor = true;
+            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
             // 
             // button_Sua
             // 
-            this.button_Sua.Location = new System.Drawing.Point(368, 130);
+            this.button_Sua.Location = new System.Drawing.Point(320, 123);
             this.button_Sua.Name = "button_Sua";
             this.button_Sua.Size = new System.Drawing.Size(140, 40);
             this.button_Sua.TabIndex = 20;
             this.button_Sua.TabStop = false;
             this.button_Sua.Text = "Sửa";
             this.button_Sua.UseVisualStyleBackColor = true;
+            this.button_Sua.Click += new System.EventHandler(this.button_Sua_Click);
             // 
             // button_Them
             // 
-            this.button_Them.Location = new System.Drawing.Point(192, 130);
+            this.button_Them.Location = new System.Drawing.Point(144, 123);
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(140, 40);
             this.button_Them.TabIndex = 19;
             this.button_Them.TabStop = false;
             this.button_Them.Text = "Thêm";
             this.button_Them.UseVisualStyleBackColor = true;
+            this.button_Them.Click += new System.EventHandler(this.button_Them_Click);
             // 
             // dataGridView_GiaoVien
             // 
@@ -191,6 +194,7 @@
             this.dataGridView_GiaoVien.Size = new System.Drawing.Size(1370, 120);
             this.dataGridView_GiaoVien.TabIndex = 0;
             this.dataGridView_GiaoVien.TabStop = false;
+            this.dataGridView_GiaoVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_GiaoVien_CellClick);
             // 
             // Column1
             // 
@@ -244,7 +248,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(648, 87);
+            this.label8.Location = new System.Drawing.Point(600, 80);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 19);
@@ -254,7 +258,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(427, 84);
+            this.label7.Location = new System.Drawing.Point(379, 77);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 19);
@@ -265,8 +269,8 @@
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.CoVanHocTapTableAdapter = null;
             this.tableAdapterManager1.DiemTableAdapter = null;
+            this.tableAdapterManager1.GiaoVienTableAdapter = null;
             this.tableAdapterManager1.KhoaTableAdapter = null;
             this.tableAdapterManager1.LopTableAdapter = null;
             this.tableAdapterManager1.MonHocTableAdapter = null;
@@ -277,14 +281,14 @@
             // dateTimePicker_NgaySinh
             // 
             this.dateTimePicker_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(593, 38);
+            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(491, 32);
             this.dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
             this.dateTimePicker_NgaySinh.Size = new System.Drawing.Size(115, 26);
             this.dateTimePicker_NgaySinh.TabIndex = 3;
             // 
             // textBox_MaGiaoVien
             // 
-            this.textBox_MaGiaoVien.Location = new System.Drawing.Point(307, 80);
+            this.textBox_MaGiaoVien.Location = new System.Drawing.Point(259, 73);
             this.textBox_MaGiaoVien.MaxLength = 255;
             this.textBox_MaGiaoVien.Name = "textBox_MaGiaoVien";
             this.textBox_MaGiaoVien.Size = new System.Drawing.Size(92, 26);
@@ -293,7 +297,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(198, 84);
+            this.label4.Location = new System.Drawing.Point(150, 77);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(102, 19);
@@ -302,7 +306,7 @@
             // 
             // textBox_TenGiaoVien
             // 
-            this.textBox_TenGiaoVien.Location = new System.Drawing.Point(352, 36);
+            this.textBox_TenGiaoVien.Location = new System.Drawing.Point(250, 30);
             this.textBox_TenGiaoVien.MaxLength = 255;
             this.textBox_TenGiaoVien.Name = "textBox_TenGiaoVien";
             this.textBox_TenGiaoVien.Size = new System.Drawing.Size(137, 26);
@@ -311,7 +315,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(242, 40);
+            this.label3.Location = new System.Drawing.Point(140, 34);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 19);
@@ -321,30 +325,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(505, 42);
+            this.label2.Location = new System.Drawing.Point(403, 36);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ngày sinh:";
-            // 
-            // textBox_ID
-            // 
-            this.textBox_ID.Enabled = false;
-            this.textBox_ID.Location = new System.Drawing.Point(178, 37);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.Size = new System.Drawing.Size(41, 26);
-            this.textBox_ID.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 40);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
             // 
             // panel2
             // 
@@ -378,8 +364,6 @@
             this.panel1.Controls.Add(this.textBox_TenGiaoVien);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox_ID);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -389,16 +373,18 @@
             // 
             // comboBox_MaKhoa
             // 
+            this.comboBox_MaKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MaKhoa.FormattingEnabled = true;
-            this.comboBox_MaKhoa.Location = new System.Drawing.Point(730, 81);
+            this.comboBox_MaKhoa.Location = new System.Drawing.Point(682, 74);
             this.comboBox_MaKhoa.Name = "comboBox_MaKhoa";
             this.comboBox_MaKhoa.Size = new System.Drawing.Size(121, 27);
             this.comboBox_MaKhoa.TabIndex = 7;
             // 
             // comboBox_MaLop
             // 
+            this.comboBox_MaLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MaLop.FormattingEnabled = true;
-            this.comboBox_MaLop.Location = new System.Drawing.Point(497, 81);
+            this.comboBox_MaLop.Location = new System.Drawing.Point(449, 74);
             this.comboBox_MaLop.Name = "comboBox_MaLop";
             this.comboBox_MaLop.Size = new System.Drawing.Size(121, 27);
             this.comboBox_MaLop.TabIndex = 6;
@@ -416,6 +402,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý giáo viên";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.fQuanLyGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_GiaoVien)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -446,8 +433,6 @@
         private System.Windows.Forms.TextBox textBox_TenGiaoVien;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_ID;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

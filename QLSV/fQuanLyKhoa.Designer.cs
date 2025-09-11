@@ -43,8 +43,6 @@
             this.textBox_TenKhoa = new System.Windows.Forms.TextBox();
             this.textBox_MaKhoa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Khoa)).BeginInit();
@@ -73,9 +71,11 @@
             this.dataGridView_Khoa.Size = new System.Drawing.Size(1370, 583);
             this.dataGridView_Khoa.TabIndex = 1;
             this.dataGridView_Khoa.TabStop = false;
+            this.dataGridView_Khoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_Khoa_CellClick);
             // 
             // Column1
             // 
+            this.Column1.DataPropertyName = "ID";
             this.Column1.HeaderText = "ID";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
@@ -84,6 +84,7 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "MaKhoa";
             this.Column2.HeaderText = "MÃ KHOA";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
@@ -91,6 +92,7 @@
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "TenKhoa";
             this.Column3.HeaderText = "TÊN KHOA";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
@@ -114,6 +116,7 @@
             this.button_TimKiem.TabStop = false;
             this.button_TimKiem.Text = "Tìm Kiếm";
             this.button_TimKiem.UseVisualStyleBackColor = true;
+            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
             // 
             // textBox_TimKiem
             // 
@@ -142,6 +145,7 @@
             this.button_TaiLai.TabStop = false;
             this.button_TaiLai.Text = "Tải Lại";
             this.button_TaiLai.UseVisualStyleBackColor = true;
+            this.button_TaiLai.Click += new System.EventHandler(this.button_TaiLai_Click);
             // 
             // button_Xoa
             // 
@@ -152,6 +156,7 @@
             this.button_Xoa.TabStop = false;
             this.button_Xoa.Text = "Xóa";
             this.button_Xoa.UseVisualStyleBackColor = true;
+            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
             // 
             // button_Sua
             // 
@@ -162,6 +167,7 @@
             this.button_Sua.TabStop = false;
             this.button_Sua.Text = "Sửa";
             this.button_Sua.UseVisualStyleBackColor = true;
+            this.button_Sua.Click += new System.EventHandler(this.button_Sua_Click);
             // 
             // button_Them
             // 
@@ -172,10 +178,11 @@
             this.button_Them.TabStop = false;
             this.button_Them.Text = "Thêm";
             this.button_Them.UseVisualStyleBackColor = true;
+            this.button_Them.Click += new System.EventHandler(this.button_Them_Click);
             // 
             // textBox_TenKhoa
             // 
-            this.textBox_TenKhoa.Location = new System.Drawing.Point(644, 44);
+            this.textBox_TenKhoa.Location = new System.Drawing.Point(569, 44);
             this.textBox_TenKhoa.MaxLength = 255;
             this.textBox_TenKhoa.Name = "textBox_TenKhoa";
             this.textBox_TenKhoa.Size = new System.Drawing.Size(165, 26);
@@ -183,7 +190,7 @@
             // 
             // textBox_MaKhoa
             // 
-            this.textBox_MaKhoa.Location = new System.Drawing.Point(346, 45);
+            this.textBox_MaKhoa.Location = new System.Drawing.Point(271, 45);
             this.textBox_MaKhoa.MaxLength = 255;
             this.textBox_MaKhoa.Name = "textBox_MaKhoa";
             this.textBox_MaKhoa.Size = new System.Drawing.Size(171, 26);
@@ -192,40 +199,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(264, 48);
+            this.label3.Location = new System.Drawing.Point(189, 48);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 19);
             this.label3.TabIndex = 4;
             this.label3.Text = "Mã khoa:";
             // 
-            // textBox_ID
-            // 
-            this.textBox_ID.Enabled = false;
-            this.textBox_ID.Location = new System.Drawing.Point(177, 45);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.Size = new System.Drawing.Size(41, 26);
-            this.textBox_ID.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(138, 48);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.textBox_TenKhoa);
             this.panel1.Controls.Add(this.button_TimKiem);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button_Them);
             this.panel1.Controls.Add(this.textBox_TimKiem);
             this.panel1.Controls.Add(this.button_Sua);
-            this.panel1.Controls.Add(this.textBox_ID);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.button_Xoa);
@@ -242,7 +229,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(560, 48);
+            this.label5.Location = new System.Drawing.Point(485, 48);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 19);
@@ -262,6 +249,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý khoa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.fQuanLyKhoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Khoa)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -273,9 +261,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView_Khoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button_TimKiem;
         private System.Windows.Forms.TextBox textBox_TimKiem;
@@ -287,10 +272,11 @@
         private System.Windows.Forms.TextBox textBox_TenKhoa;
         private System.Windows.Forms.TextBox textBox_MaKhoa;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox_ID;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
 
     }
 }

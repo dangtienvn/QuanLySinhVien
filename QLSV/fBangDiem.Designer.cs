@@ -97,7 +97,7 @@
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.CoVanHocTapTableAdapter = null;
+            this.tableAdapterManager1.GiaoVienTableAdapter = null;
             this.tableAdapterManager1.DiemTableAdapter = null;
             this.tableAdapterManager1.KhoaTableAdapter = null;
             this.tableAdapterManager1.LopTableAdapter = null;

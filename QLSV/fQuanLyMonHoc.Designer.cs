@@ -37,7 +37,7 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.numericUpDownTietThucHanh = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown_TietThucHanh = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_TietLyThuyet = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown_SoTinChi = new System.Windows.Forms.NumericUpDown();
             this.button_TimKiem = new System.Windows.Forms.Button();
@@ -54,13 +54,11 @@
             this.textBox_TenMonHoc = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_ID = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tableAdapterManager1 = new QLSV.DataSetTableAdapters.TableAdapterManager();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MonHoc)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTietThucHanh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_TietThucHanh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_TietLyThuyet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_SoTinChi)).BeginInit();
             this.SuspendLayout();
@@ -99,6 +97,7 @@
             this.dataGridView_MonHoc.Size = new System.Drawing.Size(1370, 96);
             this.dataGridView_MonHoc.TabIndex = 0;
             this.dataGridView_MonHoc.TabStop = false;
+            this.dataGridView_MonHoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_MonHoc_CellClick);
             // 
             // Column1
             // 
@@ -144,7 +143,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.numericUpDownTietThucHanh);
+            this.panel1.Controls.Add(this.numericUpDown_TietThucHanh);
             this.panel1.Controls.Add(this.numericUpDown_TietLyThuyet);
             this.panel1.Controls.Add(this.numericUpDown_SoTinChi);
             this.panel1.Controls.Add(this.button_TimKiem);
@@ -161,8 +160,6 @@
             this.panel1.Controls.Add(this.textBox_TenMonHoc);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox_ID);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -170,12 +167,12 @@
             this.panel1.Size = new System.Drawing.Size(1370, 192);
             this.panel1.TabIndex = 4;
             // 
-            // numericUpDownTietThucHanh
+            // numericUpDown_TietThucHanh
             // 
-            this.numericUpDownTietThucHanh.Location = new System.Drawing.Point(748, 77);
-            this.numericUpDownTietThucHanh.Name = "numericUpDownTietThucHanh";
-            this.numericUpDownTietThucHanh.Size = new System.Drawing.Size(71, 26);
-            this.numericUpDownTietThucHanh.TabIndex = 5;
+            this.numericUpDown_TietThucHanh.Location = new System.Drawing.Point(748, 77);
+            this.numericUpDown_TietThucHanh.Name = "numericUpDown_TietThucHanh";
+            this.numericUpDown_TietThucHanh.Size = new System.Drawing.Size(71, 26);
+            this.numericUpDown_TietThucHanh.TabIndex = 5;
             // 
             // numericUpDown_TietLyThuyet
             // 
@@ -200,6 +197,7 @@
             this.button_TimKiem.TabStop = false;
             this.button_TimKiem.Text = "Tìm Kiếm";
             this.button_TimKiem.UseVisualStyleBackColor = true;
+            this.button_TimKiem.Click += new System.EventHandler(this.button_TimKiem_Click);
             // 
             // textBox_TimKiem
             // 
@@ -228,6 +226,7 @@
             this.button_TaiLai.TabStop = false;
             this.button_TaiLai.Text = "Tải Lại";
             this.button_TaiLai.UseVisualStyleBackColor = true;
+            this.button_TaiLai.Click += new System.EventHandler(this.button_TaiLai_Click);
             // 
             // button_Xoa
             // 
@@ -238,6 +237,7 @@
             this.button_Xoa.TabStop = false;
             this.button_Xoa.Text = "Xóa";
             this.button_Xoa.UseVisualStyleBackColor = true;
+            this.button_Xoa.Click += new System.EventHandler(this.button_Xoa_Click);
             // 
             // button_Sua
             // 
@@ -248,6 +248,7 @@
             this.button_Sua.TabStop = false;
             this.button_Sua.Text = "Sửa";
             this.button_Sua.UseVisualStyleBackColor = true;
+            this.button_Sua.Click += new System.EventHandler(this.button_Sua_Click);
             // 
             // button_Them
             // 
@@ -258,6 +259,7 @@
             this.button_Them.TabStop = false;
             this.button_Them.Text = "Thêm";
             this.button_Them.UseVisualStyleBackColor = true;
+            this.button_Them.Click += new System.EventHandler(this.button_Them_Click);
             // 
             // label8
             // 
@@ -281,7 +283,7 @@
             // 
             // textBox_MaMonHoc
             // 
-            this.textBox_MaMonHoc.Location = new System.Drawing.Point(392, 30);
+            this.textBox_MaMonHoc.Location = new System.Drawing.Point(314, 32);
             this.textBox_MaMonHoc.MaxLength = 255;
             this.textBox_MaMonHoc.Name = "textBox_MaMonHoc";
             this.textBox_MaMonHoc.Size = new System.Drawing.Size(126, 26);
@@ -290,7 +292,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(288, 33);
+            this.label4.Location = new System.Drawing.Point(210, 35);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(97, 19);
@@ -299,7 +301,7 @@
             // 
             // textBox_TenMonHoc
             // 
-            this.textBox_TenMonHoc.Location = new System.Drawing.Point(679, 30);
+            this.textBox_TenMonHoc.Location = new System.Drawing.Point(601, 32);
             this.textBox_TenMonHoc.MaxLength = 255;
             this.textBox_TenMonHoc.Name = "textBox_TenMonHoc";
             this.textBox_TenMonHoc.Size = new System.Drawing.Size(140, 26);
@@ -308,7 +310,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(576, 33);
+            this.label3.Location = new System.Drawing.Point(498, 35);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 19);
@@ -325,30 +327,12 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Sô tín chỉ:";
             // 
-            // textBox_ID
-            // 
-            this.textBox_ID.Enabled = false;
-            this.textBox_ID.Location = new System.Drawing.Point(187, 30);
-            this.textBox_ID.Name = "textBox_ID";
-            this.textBox_ID.Size = new System.Drawing.Size(41, 26);
-            this.textBox_ID.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(148, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ID:";
-            // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.CoVanHocTapTableAdapter = null;
             this.tableAdapterManager1.DiemTableAdapter = null;
+            this.tableAdapterManager1.GiaoVienTableAdapter = null;
             this.tableAdapterManager1.KhoaTableAdapter = null;
             this.tableAdapterManager1.LopTableAdapter = null;
             this.tableAdapterManager1.MonHocTableAdapter = null;
@@ -369,11 +353,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý môn học";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.fQuanLyMonHoc_Load);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_MonHoc)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTietThucHanh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_TietThucHanh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_TietLyThuyet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown_SoTinChi)).EndInit();
             this.ResumeLayout(false);
@@ -399,8 +384,6 @@
         private System.Windows.Forms.TextBox textBox_TenMonHoc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_ID;
-        private System.Windows.Forms.Label label1;
         private DataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -408,7 +391,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.NumericUpDown numericUpDownTietThucHanh;
+        private System.Windows.Forms.NumericUpDown numericUpDown_TietThucHanh;
         private System.Windows.Forms.NumericUpDown numericUpDown_TietLyThuyet;
         private System.Windows.Forms.NumericUpDown numericUpDown_SoTinChi;
     }

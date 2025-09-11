@@ -35,7 +35,7 @@ namespace QLSV
                 conn.Open();
 
                 // Lấy mật khẩu theo tên tài khoản
-                string sql = "SELECT MatKhau FROM DangNhap WHERE TenTaiKhoan=@tk";
+                string sql = "SELECT MatKhau FROM TaiKhoan WHERE TenDangNhap=@tk";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@tk", tk);
 
