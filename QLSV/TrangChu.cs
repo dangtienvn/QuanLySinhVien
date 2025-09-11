@@ -17,18 +17,6 @@ namespace QLSV
             InitializeComponent();
         }
 
-        private void button_DangXuat_Click(object sender, EventArgs e)
-        {
-            DialogResult D = MessageBox.Show("Bạn có muốn đăng xuất không", "Chú Ý", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (D == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            else
-            {
-            }
-        }
-
         private void OpenChildForm(Form childForm)
         {
             // Xóa form cũ trong panel
@@ -93,16 +81,40 @@ namespace QLSV
             OpenChildForm(f);
         }
 
+        public string TenDangNhapHienTai { get; set; } // lưu tên đăng nhập
+
         private void thôngTtinChiTiếtToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fThongTinChiTiet f = new fThongTinChiTiet();
+            f.TenDangNhapHienTai = this.TenDangNhapHienTai; // dùng property đã có
             f.ShowDialog();
         }
 
         private void quênMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fQuenMatKhau f = new fQuenMatKhau();
+            f.TenDangNhapHienTai = this.TenDangNhapHienTai; // Gán giá trị tên đăng nhập đang đăng nhập
             f.ShowDialog();
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MessageBox.Show("Bạn có muốn đăng xuất không?",
+                                     "Xác nhận",
+                                     MessageBoxButtons.YesNo,
+                                     MessageBoxIcon.Question);
+            if (d == DialogResult.Yes)
+            {
+                this.Hide(); // Ẩn form TrangChu
+                DangNhap f = new DangNhap();
+                f.ShowDialog();
+                this.Close(); // Đóng hẳn TrangChu sau khi form Đăng Nhập thoát
+            }
+        }
+
+        private void TrangChu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); // Tắt toàn bộ chương trình khi nhấn X
         }
     }
 }

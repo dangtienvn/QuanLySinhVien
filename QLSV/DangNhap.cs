@@ -20,35 +20,51 @@ namespace QLSV
 
         private void button_DangNhap_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LTL2CL3\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True");
-            try
+            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                conn.Open();
-                string tk = textBox_TenTaiKhoan.Text;
-                string mk = textBox_MatKhau.Text;
-                string sql = "SELECT * from TaiKhoan Where TenDangNhap = '" + tk + "'and MatKhau = '" + mk + "'";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                SqlDataReader DataReader = cmd.ExecuteReader();
-                if (textBox_MatKhau.Text == "" || textBox_TenTaiKhoan.Text == "")
+                try
                 {
-                    MessageBox.Show("Bạn điền tài khoản và mật khẩu để đăng nhập", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conn.Open();
+                    string tk = textBox_TenTaiKhoan.Text.Trim();
+                    string mk = textBox_MatKhau.Text.Trim();
+
+                    if (tk == "" || mk == "")
+                    {
+                        MessageBox.Show("Bạn phải điền tài khoản và mật khẩu!", "Thông Báo",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    string sql = "SELECT * FROM TaiKhoan WHERE TenDangNhap=@tk AND MatKhau=@mk";
+                    SqlCommand cmd = new SqlCommand(sql, conn);
+                    cmd.Parameters.AddWithValue("@tk", tk);
+                    cmd.Parameters.AddWithValue("@mk", mk);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        // Đúng tài khoản
+                        this.Hide();
+                        TrangChu home = new TrangChu();
+                        home.TenDangNhapHienTai = tk; // ✅ truyền sang TrangChu
+                        home.ShowDialog();
+                        this.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sai tài khoản hoặc mật khẩu!", "Thông Báo",
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        textBox_MatKhau.Text = "";
+                    }
                 }
-                else if (DataReader.Read() == true)
+                catch (Exception ex)
                 {
-                    this.Hide();
-                    TrangChu Home = new TrangChu();
-                    Home.ShowDialog();
-                    this.Show();
+                    MessageBox.Show("Lỗi kết nối: " + ex.Message, "Thông Báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else
-                {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng? Vui lòng đăng nhập lại", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    textBox_MatKhau.Text = "";
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi kết nối" + ex, "Thống Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
