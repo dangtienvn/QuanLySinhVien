@@ -20,7 +20,7 @@ namespace QLSV
 
         private void button_DangNhap_Click(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True";
+            string connectionString = @"Data Source=Dell\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -49,7 +49,7 @@ namespace QLSV
                         // Đúng tài khoản
                         this.Hide();
                         TrangChu home = new TrangChu();
-                        home.TenDangNhapHienTai = tk; // ✅ truyền sang TrangChu
+                        home.TenDangNhapHienTai = tk; //truyền sang TrangChu
                         home.ShowDialog();
                         this.Show();
                     }
@@ -92,10 +92,10 @@ namespace QLSV
 
         private void linkLabel_DangKy_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Hide(); // ẩn form đăng nhập
+            this.Hide();
             DangKy DK = new DangKy();
             DK.ShowDialog();
-            this.Show(); // hiện lại khi đóng form đăng ký
+            
         }
 
         private void linkLabel_QuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -103,7 +103,12 @@ namespace QLSV
             this.Hide();
             QuenMatKhau QMK = new QuenMatKhau();
             QMK.ShowDialog();
-            this.Show(); // hiện lại khi đóng form quen MK
+            
+        }
+
+        private void DangNhap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); // Tắt toàn bộ chương trình khi nhấn X
         }
     }
 }

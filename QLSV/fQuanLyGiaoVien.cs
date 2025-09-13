@@ -18,8 +18,8 @@ namespace QLSV
             InitializeComponent();
         }
 
-        // 🔹 Chuỗi kết nối CSDL
-        string Nguon = @"Data Source=.\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True";
+        // Chuỗi kết nối CSDL
+        string Nguon = @"Data Source=Dell\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
         string Lenh = "";
         SqlConnection KetNoi;
         SqlCommand ThucHien;
@@ -32,7 +32,7 @@ namespace QLSV
             HienThi();
         }
 
-        // 🔹 Load dữ liệu combobox MaLop, MaKhoa
+        // Load dữ liệu combobox MaLop, MaKhoa
         void LoadComboBox()
         {
             // MaLop
@@ -52,7 +52,7 @@ namespace QLSV
             comboBox_MaKhoa.ValueMember = "MaKhoa";
         }
 
-        // 🔹 Hiển thị danh sách giáo viên
+        // Hiển thị danh sách giáo viên
         void HienThi()
         {
             dataGridView_GiaoVien.Rows.Clear();
@@ -187,7 +187,7 @@ namespace QLSV
             ResetForm();
         }
 
-        // 🔹 Reset form nhập liệu
+        // Reset form nhập liệu
         void ResetForm()
         {
             textBox_MaGiaoVien.Text = "";

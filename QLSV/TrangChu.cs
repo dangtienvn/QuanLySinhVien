@@ -105,10 +105,10 @@ namespace QLSV
                                      MessageBoxIcon.Question);
             if (d == DialogResult.Yes)
             {
-                this.Hide(); // Ẩn form TrangChu
+                this.Hide(); // Ẩn form 
                 DangNhap f = new DangNhap();
                 f.ShowDialog();
-                this.Close(); // Đóng hẳn TrangChu sau khi form Đăng Nhập thoát
+                this.Close(); // Đóng hẳn 
             }
         }
 

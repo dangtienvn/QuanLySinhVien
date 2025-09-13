@@ -19,7 +19,7 @@ namespace QLSV
         }
 
         // Kết nối CSDL
-        string Nguon = @"Data Source=.\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True";
+        string Nguon = @"Data Source=Dell\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
         string Lenh = "";
         SqlConnection KetNoi;
         SqlCommand ThucHien;

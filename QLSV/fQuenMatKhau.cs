@@ -18,7 +18,7 @@ namespace QLSV
             InitializeComponent();
         }
 
-        string connStr = @"Data Source=.\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True";
+        string connStr = @"Data Source=Dell\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
 
         // Giữ lại tên đăng nhập của user đang đăng nhập
         public string TenDangNhapHienTai { get; set; }

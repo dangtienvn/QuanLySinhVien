@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using Excel = Microsoft.Office.Interop.Excel;
+
 
 namespace QLSV
 {
@@ -18,7 +21,7 @@ namespace QLSV
             InitializeComponent();
         }
 
-        string Nguon = @"Data Source=DESKTOP-LTL2CL3\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True";
+        string Nguon = @"Data Source=Dell\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
         string Lenh = @"";
         SqlConnection KetNoi;
         SqlCommand ThucHien;
@@ -212,14 +215,14 @@ namespace QLSV
         {
             string keyword = textBox_TimKiem.Text.Trim();
 
-            // 👉 Nếu không nhập gì thì tải lại toàn bộ danh sách
+            // Nếu không nhập gì thì tải lại toàn bộ danh sách
             if (string.IsNullOrWhiteSpace(keyword))
             {
                 HienThi();
                 return;
             }
 
-            // 👉 Nếu có nhập thì tìm kiếm
+            // Nếu có nhập thì tìm kiếm
             dataGridView_Diem.Rows.Clear();
             string Lenh = @"SELECT Id, MaSV, MaMH, PhanTramTrenLop, PhanTramThi, 
                            DiemTrenLop, DiemThi, DiemTB
@@ -244,7 +247,7 @@ namespace QLSV
                 dataGridView_Diem.Rows[i].Cells[6].Value = Doc["DiemThi"];
                 dataGridView_Diem.Rows[i].Cells[7].Value = Doc["DiemTB"];
 
-                // 👉 Tính Loại dựa vào DiemTB
+                // Tính Loại dựa vào DiemTB
                 double diemTB = Convert.ToDouble(Doc["DiemTB"]);
                 string loai = "";
                 if (diemTB >= 8) loai = "A";
@@ -255,6 +258,96 @@ namespace QLSV
                 i++;
             }
             KetNoi.Close();
+        }
+
+        private void button_Xuat_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_Diem.Rows.Count > 0)
+            {
+                try
+                {
+                    // Khởi tạo Excel
+                    Excel.Application excelApp = new Excel.Application();
+                    excelApp.Visible = false;
+
+                    Excel.Workbook workbook = excelApp.Workbooks.Add(Missing.Value);
+                    Excel.Worksheet worksheet = (Excel.Worksheet)workbook.Sheets[1];
+                    worksheet.Name = "BangDiem";
+
+                    // Thêm tiêu đề
+                    int colCount = dataGridView_Diem.Columns.Count;
+                    Excel.Range title = worksheet.Range[
+                        worksheet.Cells[1, 1],
+                        worksheet.Cells[1, colCount]
+                    ];
+                    title.Merge();
+                    title.Value = "Điểm trung bình môn học";
+                    title.Font.Size = 16;
+                    title.Font.Bold = true;
+                    title.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+
+                    // Ghi header DataGridView (hàng 2)
+                    for (int i = 0; i < colCount; i++)
+                    {
+                        worksheet.Cells[2, i + 1] = dataGridView_Diem.Columns[i].HeaderText;
+                    }
+
+                    // Format header
+                    Excel.Range headerRange = worksheet.Range[
+                        worksheet.Cells[2, 1],
+                        worksheet.Cells[2, colCount]
+                    ];
+                    headerRange.Font.Bold = true;
+                    headerRange.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.LightGray);
+                    headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+
+                    // ===== Ghi dữ liệu DataGridView (từ hàng 3) =====
+                    for (int i = 0; i < dataGridView_Diem.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < colCount; j++)
+                        {
+                            worksheet.Cells[i + 3, j + 1] = dataGridView_Diem.Rows[i].Cells[j].Value?.ToString();
+                        }
+                    }
+
+                    // Tạo border cho toàn bộ bảng
+                    int rowCount = dataGridView_Diem.Rows.Count + 2; // header + data
+                    Excel.Range usedRange = worksheet.Range[
+                        worksheet.Cells[2, 1],
+                        worksheet.Cells[rowCount, colCount]
+                    ];
+                    usedRange.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                    usedRange.Borders.Weight = Excel.XlBorderWeight.xlThin;
+
+                    // Auto fit cột
+                    worksheet.Columns.AutoFit();
+
+                    // Hộp thoại lưu file
+                    SaveFileDialog sfd = new SaveFileDialog();
+                    sfd.Filter = "Excel Workbook|*.xlsx";
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        workbook.SaveAs(sfd.FileName);
+                        workbook.Close();
+                        excelApp.Quit();
+
+                        MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        workbook.Close(false);
+                        excelApp.Quit();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để xuất!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

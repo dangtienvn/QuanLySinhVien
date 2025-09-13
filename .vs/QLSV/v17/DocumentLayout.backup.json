@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D4FF90C9-5443-46C0-B7B4-A23A648C61D8}|QLSV\\QLSV.csproj|d:\\web\\projects\\studentmanagement\\quanlysinhvien\\qlsv\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4FF90C9-5443-46C0-B7B4-A23A648C61D8}|QLSV\\QLSV.csproj|solutionrelative:qlsv\\dangky.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|QLSV||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4FF90C9-5443-46C0-B7B4-A23A648C61D8}|QLSV\\QLSV.csproj|D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\qlsv\\fquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D4FF90C9-5443-46C0-B7B4-A23A648C61D8}|QLSV\\QLSV.csproj|solutionrelative:qlsv\\fquanlydiem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DangKy.cs [Design]",
+              "DocumentMoniker": "D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\QLSV\\DangKy.cs",
+              "RelativeDocumentMoniker": "QLSV\\DangKy.cs",
+              "ToolTip": "D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\QLSV\\DangKy.cs [Design]",
+              "RelativeToolTip": "QLSV\\DangKy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T08:15:13.034Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QLSV",
+              "DocumentMoniker": "D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\QLSV\\QLSV.csproj",
+              "RelativeDocumentMoniker": "QLSV\\QLSV.csproj",
+              "ToolTip": "D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\QLSV\\QLSV.csproj",
+              "RelativeToolTip": "QLSV\\QLSV.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-13T08:14:36.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fQuanLyDiem.cs [Design]",
+              "DocumentMoniker": "D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\QLSV\\fQuanLyDiem.cs",
+              "RelativeDocumentMoniker": "QLSV\\fQuanLyDiem.cs",
+              "ToolTip": "D:\\Web\\Projects\\StudentManagement\\QuanLySinhVien\\QLSV\\fQuanLyDiem.cs [Design]",
+              "RelativeToolTip": "QLSV\\fQuanLyDiem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T08:13:56.034Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

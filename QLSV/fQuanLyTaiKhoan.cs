@@ -18,7 +18,7 @@ namespace QLSV
             InitializeComponent();
         }
 
-        string Nguon = @"Data Source=.\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True";
+        string Nguon = @"Data Source=Dell\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
         SqlConnection KetNoi;
         SqlCommand ThucHien;
         SqlDataReader Doc;

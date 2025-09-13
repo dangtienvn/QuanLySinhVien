@@ -34,7 +34,7 @@ namespace QLSV
 
         private void button_DangKy_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LTL2CL3\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=Dell\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True");
             string tk = textBox_TenTaiKhoan.Text.Trim();
             string mk = textBox_MatKhau.Text;
             string xnmk = textBox_XNMatKhau.Text;
@@ -90,6 +90,19 @@ namespace QLSV
                     MessageBox.Show("Lỗi kết nối" + ex, "Thống Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
+
+        private void button_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Hide(); 
+            DangNhap f = new DangNhap();
+            f.ShowDialog();
+            this.Close(); 
+        }
+
+        private void DangKy_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit(); // Tắt toàn bộ chương trình khi nhấn X
         }
     }
 }
