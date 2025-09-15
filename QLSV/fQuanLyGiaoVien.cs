@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace QLSV
 {
@@ -124,7 +118,7 @@ namespace QLSV
 
         private void button_Xoa_Click(object sender, EventArgs e)
         {
-             int id = Convert.ToInt32(dataGridView_GiaoVien.CurrentRow.Cells[0].Value);
+            int id = Convert.ToInt32(dataGridView_GiaoVien.CurrentRow.Cells[0].Value);
             DialogResult d = MessageBox.Show("Bạn có chắc muốn xóa giáo viên " + textBox_TenGiaoVien.Text,
                 "Xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 

@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace QLSV
 {
@@ -207,6 +202,84 @@ namespace QLSV
                 i++;
             }
             KetNoi.Close();
+        }
+
+        private void button_Xuat_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_SinhVien.Rows.Count > 0)
+            {
+                try
+                {
+                    // Khởi tạo Excel
+                    Excel.Application excelApp = new Excel.Application();
+                    excelApp.Visible = false; // ẩn khi chạy
+
+                    Excel.Workbook workbook = excelApp.Workbooks.Add(Type.Missing);
+                    Excel.Worksheet worksheet = workbook.ActiveSheet;
+                    worksheet.Name = "SinhVien";
+
+                    // Tiêu đề
+                    Excel.Range titleRange = worksheet.Range[
+                        worksheet.Cells[1, 1],
+                        worksheet.Cells[1, dataGridView_SinhVien.Columns.Count]
+                    ];
+                    titleRange.Merge();
+                    titleRange.Value = "DANH SÁCH SINH VIÊN";
+                    titleRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                    titleRange.Font.Bold = true;
+                    titleRange.Font.Size = 16;
+
+                    // Header
+                    for (int i = 0; i < dataGridView_SinhVien.Columns.Count; i++)
+                    {
+                        worksheet.Cells[2, i + 1] = dataGridView_SinhVien.Columns[i].HeaderText;
+                        Excel.Range headerCell = (Excel.Range)worksheet.Cells[2, i + 1];
+                        headerCell.Font.Bold = true;
+                        headerCell.Interior.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.LightGray);
+                        headerCell.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+                    }
+
+                    // Data
+                    for (int i = 0; i < dataGridView_SinhVien.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridView_SinhVien.Columns.Count; j++)
+                        {
+                            worksheet.Cells[i + 3, j + 1] = dataGridView_SinhVien.Rows[i].Cells[j].Value?.ToString();
+                        }
+                    }
+
+                    // ===== Thêm border =====
+                    Excel.Range usedRange = worksheet.Range[
+                        worksheet.Cells[2, 1],
+                        worksheet.Cells[dataGridView_SinhVien.Rows.Count + 2, dataGridView_SinhVien.Columns.Count]
+                    ];
+                    usedRange.Borders.LineStyle = Excel.XlLineStyle.xlContinuous;
+                    usedRange.Borders.Weight = Excel.XlBorderWeight.xlThin;
+
+                    // Auto fit cột
+                    worksheet.Columns.AutoFit();
+
+                    // Hộp thoại lưu file
+                    SaveFileDialog sfd = new SaveFileDialog();
+                    sfd.Filter = "Excel Workbook|*.xlsx";
+                    if (sfd.ShowDialog() == DialogResult.OK)
+                    {
+                        workbook.SaveAs(sfd.FileName);
+                        MessageBox.Show("Xuất Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                    workbook.Close();
+                    excelApp.Quit();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để xuất!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

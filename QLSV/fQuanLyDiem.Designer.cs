@@ -64,6 +64,7 @@
             this.comboBox_MaMonHoc = new System.Windows.Forms.ComboBox();
             this.comboBox_MaSinhVien = new System.Windows.Forms.ComboBox();
             this.comboBox_Loai = new System.Windows.Forms.ComboBox();
+            this.button_Xuat = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Diem)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -74,7 +75,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(740, 42);
+            this.label11.Location = new System.Drawing.Point(751, 35);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(103, 19);
@@ -83,7 +84,7 @@
             // 
             // button_TimKiem
             // 
-            this.button_TimKiem.Location = new System.Drawing.Point(1094, 85);
+            this.button_TimKiem.Location = new System.Drawing.Point(1105, 78);
             this.button_TimKiem.Name = "button_TimKiem";
             this.button_TimKiem.Size = new System.Drawing.Size(109, 37);
             this.button_TimKiem.TabIndex = 25;
@@ -94,7 +95,7 @@
             // 
             // textBox_TimKiem
             // 
-            this.textBox_TimKiem.Location = new System.Drawing.Point(1113, 39);
+            this.textBox_TimKiem.Location = new System.Drawing.Point(1124, 32);
             this.textBox_TimKiem.MaxLength = 255;
             this.textBox_TimKiem.Name = "textBox_TimKiem";
             this.textBox_TimKiem.Size = new System.Drawing.Size(167, 26);
@@ -103,7 +104,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1029, 44);
+            this.label10.Location = new System.Drawing.Point(1040, 37);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 19);
@@ -112,7 +113,7 @@
             // 
             // button_TaiLai
             // 
-            this.button_TaiLai.Location = new System.Drawing.Point(661, 130);
+            this.button_TaiLai.Location = new System.Drawing.Point(607, 123);
             this.button_TaiLai.Name = "button_TaiLai";
             this.button_TaiLai.Size = new System.Drawing.Size(140, 40);
             this.button_TaiLai.TabIndex = 22;
@@ -123,7 +124,7 @@
             // 
             // button_Xoa
             // 
-            this.button_Xoa.Location = new System.Drawing.Point(488, 130);
+            this.button_Xoa.Location = new System.Drawing.Point(434, 123);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(140, 40);
             this.button_Xoa.TabIndex = 21;
@@ -134,7 +135,7 @@
             // 
             // button_Sua
             // 
-            this.button_Sua.Location = new System.Drawing.Point(310, 130);
+            this.button_Sua.Location = new System.Drawing.Point(256, 123);
             this.button_Sua.Name = "button_Sua";
             this.button_Sua.Size = new System.Drawing.Size(140, 40);
             this.button_Sua.TabIndex = 20;
@@ -145,7 +146,7 @@
             // 
             // button_Them
             // 
-            this.button_Them.Location = new System.Drawing.Point(134, 130);
+            this.button_Them.Location = new System.Drawing.Point(80, 123);
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(140, 40);
             this.button_Them.TabIndex = 19;
@@ -157,7 +158,7 @@
             // textBox_DiemTrungBinh
             // 
             this.textBox_DiemTrungBinh.Enabled = false;
-            this.textBox_DiemTrungBinh.Location = new System.Drawing.Point(619, 85);
+            this.textBox_DiemTrungBinh.Location = new System.Drawing.Point(630, 78);
             this.textBox_DiemTrungBinh.MaxLength = 255;
             this.textBox_DiemTrungBinh.Name = "textBox_DiemTrungBinh";
             this.textBox_DiemTrungBinh.Size = new System.Drawing.Size(94, 26);
@@ -166,7 +167,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(491, 87);
+            this.label9.Location = new System.Drawing.Point(502, 80);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(121, 19);
@@ -175,7 +176,7 @@
             // 
             // textBox_DiemThi
             // 
-            this.textBox_DiemThi.Location = new System.Drawing.Point(373, 84);
+            this.textBox_DiemThi.Location = new System.Drawing.Point(384, 77);
             this.textBox_DiemThi.MaxLength = 255;
             this.textBox_DiemThi.Name = "textBox_DiemThi";
             this.textBox_DiemThi.Size = new System.Drawing.Size(92, 26);
@@ -284,7 +285,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(291, 87);
+            this.label8.Location = new System.Drawing.Point(302, 80);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 19);
@@ -293,7 +294,7 @@
             // 
             // textBox_DiemLop
             // 
-            this.textBox_DiemLop.Location = new System.Drawing.Point(175, 84);
+            this.textBox_DiemLop.Location = new System.Drawing.Point(186, 77);
             this.textBox_DiemLop.MaxLength = 255;
             this.textBox_DiemLop.Name = "textBox_DiemLop";
             this.textBox_DiemLop.Size = new System.Drawing.Size(92, 26);
@@ -302,7 +303,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(100, 87);
+            this.label7.Location = new System.Drawing.Point(111, 80);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(75, 19);
@@ -325,7 +326,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(739, 90);
+            this.label5.Location = new System.Drawing.Point(750, 83);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 19);
@@ -335,7 +336,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(79, 41);
+            this.label4.Location = new System.Drawing.Point(90, 34);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 19);
@@ -345,7 +346,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(301, 42);
+            this.label3.Location = new System.Drawing.Point(312, 35);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 19);
@@ -355,7 +356,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(557, 41);
+            this.label2.Location = new System.Drawing.Point(568, 34);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 19);
@@ -374,6 +375,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button_Xuat);
             this.panel1.Controls.Add(this.numericUpDown_PhanTramThi);
             this.panel1.Controls.Add(this.numericUpDown_PhanTramLop);
             this.panel1.Controls.Add(this.comboBox_MaMonHoc);
@@ -406,14 +408,14 @@
             // 
             // numericUpDown_PhanTramThi
             // 
-            this.numericUpDown_PhanTramThi.Location = new System.Drawing.Point(850, 38);
+            this.numericUpDown_PhanTramThi.Location = new System.Drawing.Point(861, 31);
             this.numericUpDown_PhanTramThi.Name = "numericUpDown_PhanTramThi";
             this.numericUpDown_PhanTramThi.Size = new System.Drawing.Size(44, 26);
             this.numericUpDown_PhanTramThi.TabIndex = 4;
             // 
             // numericUpDown_PhanTramLop
             // 
-            this.numericUpDown_PhanTramLop.Location = new System.Drawing.Point(671, 37);
+            this.numericUpDown_PhanTramLop.Location = new System.Drawing.Point(682, 30);
             this.numericUpDown_PhanTramLop.Name = "numericUpDown_PhanTramLop";
             this.numericUpDown_PhanTramLop.Size = new System.Drawing.Size(44, 26);
             this.numericUpDown_PhanTramLop.TabIndex = 3;
@@ -428,7 +430,7 @@
             "D",
             "E",
             "F"});
-            this.comboBox_MaMonHoc.Location = new System.Drawing.Point(405, 38);
+            this.comboBox_MaMonHoc.Location = new System.Drawing.Point(416, 31);
             this.comboBox_MaMonHoc.Name = "comboBox_MaMonHoc";
             this.comboBox_MaMonHoc.Size = new System.Drawing.Size(128, 27);
             this.comboBox_MaMonHoc.TabIndex = 2;
@@ -443,7 +445,7 @@
             "D",
             "E",
             "F"});
-            this.comboBox_MaSinhVien.Location = new System.Drawing.Point(147, 36);
+            this.comboBox_MaSinhVien.Location = new System.Drawing.Point(158, 29);
             this.comboBox_MaSinhVien.Name = "comboBox_MaSinhVien";
             this.comboBox_MaSinhVien.Size = new System.Drawing.Size(128, 27);
             this.comboBox_MaSinhVien.TabIndex = 1;
@@ -457,10 +459,21 @@
             "A",
             "B",
             "C"});
-            this.comboBox_Loai.Location = new System.Drawing.Point(790, 84);
+            this.comboBox_Loai.Location = new System.Drawing.Point(801, 77);
             this.comboBox_Loai.Name = "comboBox_Loai";
             this.comboBox_Loai.Size = new System.Drawing.Size(60, 27);
             this.comboBox_Loai.TabIndex = 8;
+            // 
+            // button_Xuat
+            // 
+            this.button_Xuat.Location = new System.Drawing.Point(782, 123);
+            this.button_Xuat.Name = "button_Xuat";
+            this.button_Xuat.Size = new System.Drawing.Size(140, 40);
+            this.button_Xuat.TabIndex = 31;
+            this.button_Xuat.TabStop = false;
+            this.button_Xuat.Text = "Xuất Excel";
+            this.button_Xuat.UseVisualStyleBackColor = true;
+            this.button_Xuat.Click += new System.EventHandler(this.button_Xuat_Click);
             // 
             // fQuanLyDiem
             // 
@@ -524,5 +537,6 @@
         private System.Windows.Forms.ComboBox comboBox_MaMonHoc;
         private System.Windows.Forms.ComboBox comboBox_MaSinhVien;
         private System.Windows.Forms.ComboBox comboBox_Loai;
+        private System.Windows.Forms.Button button_Xuat;
     }
 }

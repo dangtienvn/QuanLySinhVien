@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace QLSV
 {
@@ -147,7 +140,7 @@ namespace QLSV
 
         private void dataGridView_TaiKhoan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-             if (dataGridView_TaiKhoan.CurrentRow == null) return;
+            if (dataGridView_TaiKhoan.CurrentRow == null) return;
 
             textBox_TenDangNhap.Text = dataGridView_TaiKhoan.CurrentRow.Cells[1].Value.ToString();
             textBox_MatKhau.Text = dataGridView_TaiKhoan.CurrentRow.Cells[2].Value.ToString();

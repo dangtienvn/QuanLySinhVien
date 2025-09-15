@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace QLSV
 {
@@ -20,7 +13,7 @@ namespace QLSV
 
         private void checkBox_HMK_CheckedChanged(object sender, EventArgs e)
         {
-               if (checkBox_HMK.Checked)
+            if (checkBox_HMK.Checked)
             {
                 textBox_MatKhau.UseSystemPasswordChar = false; // Hiện Mật Khẩu
                 textBox_XNMatKhau.UseSystemPasswordChar = false;
@@ -64,7 +57,7 @@ namespace QLSV
 
                     if (count > 0)
                     {
-                        MessageBox.Show("Tên tài khoản đã tồn tại, vui lòng chọn tên khác!","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Tên tài khoản đã tồn tại, vui lòng chọn tên khác!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
@@ -77,7 +70,7 @@ namespace QLSV
                     int rows = cmd.ExecuteNonQuery();
                     if (rows > 0)
                     {
-                        MessageBox.Show("Đăng ký thành công!","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Đăng ký thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
                     else

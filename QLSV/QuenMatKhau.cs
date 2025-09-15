@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace QLSV
 {
@@ -21,12 +14,12 @@ namespace QLSV
         {
 
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LTL2CL3\SQLEXPRESS;Initial Catalog=db_QLSV;Integrated Security=True");
-            
+
             string tk = textBox_TenTaiKhoan.Text.Trim();
 
             if (string.IsNullOrEmpty(tk))
             {
-                MessageBox.Show("Vui lòng nhập tên tài khoản!","Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Vui lòng nhập tên tài khoản!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

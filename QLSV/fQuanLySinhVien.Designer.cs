@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button_Xuat = new System.Windows.Forms.Button();
             this.comboBox_MaGiaoVien = new System.Windows.Forms.ComboBox();
             this.comboBox_MaKhoa = new System.Windows.Forms.ComboBox();
             this.comboBox_MaLop = new System.Windows.Forms.ComboBox();
@@ -75,6 +76,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button_Xuat);
             this.panel1.Controls.Add(this.comboBox_MaGiaoVien);
             this.panel1.Controls.Add(this.comboBox_MaKhoa);
             this.panel1.Controls.Add(this.comboBox_MaLop);
@@ -108,11 +110,22 @@
             this.panel1.Size = new System.Drawing.Size(1370, 192);
             this.panel1.TabIndex = 1;
             // 
+            // button_Xuat
+            // 
+            this.button_Xuat.Location = new System.Drawing.Point(802, 124);
+            this.button_Xuat.Name = "button_Xuat";
+            this.button_Xuat.Size = new System.Drawing.Size(140, 40);
+            this.button_Xuat.TabIndex = 30;
+            this.button_Xuat.TabStop = false;
+            this.button_Xuat.Text = "Xuất Excel";
+            this.button_Xuat.UseVisualStyleBackColor = true;
+            this.button_Xuat.Click += new System.EventHandler(this.button_Xuat_Click);
+            // 
             // comboBox_MaGiaoVien
             // 
             this.comboBox_MaGiaoVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MaGiaoVien.FormattingEnabled = true;
-            this.comboBox_MaGiaoVien.Location = new System.Drawing.Point(689, 75);
+            this.comboBox_MaGiaoVien.Location = new System.Drawing.Point(691, 72);
             this.comboBox_MaGiaoVien.Name = "comboBox_MaGiaoVien";
             this.comboBox_MaGiaoVien.Size = new System.Drawing.Size(93, 27);
             this.comboBox_MaGiaoVien.TabIndex = 29;
@@ -121,7 +134,7 @@
             // 
             this.comboBox_MaKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MaKhoa.FormattingEnabled = true;
-            this.comboBox_MaKhoa.Location = new System.Drawing.Point(467, 73);
+            this.comboBox_MaKhoa.Location = new System.Drawing.Point(469, 70);
             this.comboBox_MaKhoa.Name = "comboBox_MaKhoa";
             this.comboBox_MaKhoa.Size = new System.Drawing.Size(93, 27);
             this.comboBox_MaKhoa.TabIndex = 28;
@@ -130,7 +143,7 @@
             // 
             this.comboBox_MaLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox_MaLop.FormattingEnabled = true;
-            this.comboBox_MaLop.Location = new System.Drawing.Point(253, 75);
+            this.comboBox_MaLop.Location = new System.Drawing.Point(255, 72);
             this.comboBox_MaLop.Name = "comboBox_MaLop";
             this.comboBox_MaLop.Size = new System.Drawing.Size(112, 27);
             this.comboBox_MaLop.TabIndex = 27;
@@ -138,7 +151,7 @@
             // radioButton_Nu
             // 
             this.radioButton_Nu.AutoSize = true;
-            this.radioButton_Nu.Location = new System.Drawing.Point(621, 34);
+            this.radioButton_Nu.Location = new System.Drawing.Point(666, 33);
             this.radioButton_Nu.Name = "radioButton_Nu";
             this.radioButton_Nu.Size = new System.Drawing.Size(49, 23);
             this.radioButton_Nu.TabIndex = 5;
@@ -149,7 +162,7 @@
             // 
             this.radioButton_Nam.AutoSize = true;
             this.radioButton_Nam.Checked = true;
-            this.radioButton_Nam.Location = new System.Drawing.Point(567, 34);
+            this.radioButton_Nam.Location = new System.Drawing.Point(612, 33);
             this.radioButton_Nam.Name = "radioButton_Nam";
             this.radioButton_Nam.Size = new System.Drawing.Size(59, 23);
             this.radioButton_Nam.TabIndex = 4;
@@ -160,7 +173,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(488, 36);
+            this.label11.Location = new System.Drawing.Point(533, 35);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(72, 19);
@@ -169,7 +182,7 @@
             // 
             // button_TimKiem
             // 
-            this.button_TimKiem.Location = new System.Drawing.Point(1171, 77);
+            this.button_TimKiem.Location = new System.Drawing.Point(1173, 74);
             this.button_TimKiem.Name = "button_TimKiem";
             this.button_TimKiem.Size = new System.Drawing.Size(109, 37);
             this.button_TimKiem.TabIndex = 25;
@@ -180,7 +193,7 @@
             // 
             // textBox_TimKiem
             // 
-            this.textBox_TimKiem.Location = new System.Drawing.Point(1190, 31);
+            this.textBox_TimKiem.Location = new System.Drawing.Point(1192, 28);
             this.textBox_TimKiem.MaxLength = 255;
             this.textBox_TimKiem.Name = "textBox_TimKiem";
             this.textBox_TimKiem.Size = new System.Drawing.Size(167, 26);
@@ -189,7 +202,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(1106, 36);
+            this.label10.Location = new System.Drawing.Point(1108, 33);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 19);
@@ -198,7 +211,7 @@
             // 
             // button_TaiLai
             // 
-            this.button_TaiLai.Location = new System.Drawing.Point(719, 123);
+            this.button_TaiLai.Location = new System.Drawing.Point(627, 124);
             this.button_TaiLai.Name = "button_TaiLai";
             this.button_TaiLai.Size = new System.Drawing.Size(140, 40);
             this.button_TaiLai.TabIndex = 22;
@@ -209,7 +222,7 @@
             // 
             // button_Xoa
             // 
-            this.button_Xoa.Location = new System.Drawing.Point(546, 123);
+            this.button_Xoa.Location = new System.Drawing.Point(454, 124);
             this.button_Xoa.Name = "button_Xoa";
             this.button_Xoa.Size = new System.Drawing.Size(140, 40);
             this.button_Xoa.TabIndex = 21;
@@ -220,7 +233,7 @@
             // 
             // button_Sua
             // 
-            this.button_Sua.Location = new System.Drawing.Point(368, 123);
+            this.button_Sua.Location = new System.Drawing.Point(276, 124);
             this.button_Sua.Name = "button_Sua";
             this.button_Sua.Size = new System.Drawing.Size(140, 40);
             this.button_Sua.TabIndex = 20;
@@ -231,7 +244,7 @@
             // 
             // button_Them
             // 
-            this.button_Them.Location = new System.Drawing.Point(192, 123);
+            this.button_Them.Location = new System.Drawing.Point(100, 124);
             this.button_Them.Name = "button_Them";
             this.button_Them.Size = new System.Drawing.Size(140, 40);
             this.button_Them.TabIndex = 19;
@@ -243,7 +256,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(580, 80);
+            this.label9.Location = new System.Drawing.Point(582, 77);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 19);
@@ -253,7 +266,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(385, 77);
+            this.label8.Location = new System.Drawing.Point(387, 74);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(75, 19);
@@ -263,7 +276,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(183, 79);
+            this.label7.Location = new System.Drawing.Point(185, 76);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(63, 19);
@@ -273,7 +286,7 @@
             // dateTimePicker_NhapHoc
             // 
             this.dateTimePicker_NhapHoc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_NhapHoc.Location = new System.Drawing.Point(931, 77);
+            this.dateTimePicker_NhapHoc.Location = new System.Drawing.Point(933, 74);
             this.dateTimePicker_NhapHoc.Name = "dateTimePicker_NhapHoc";
             this.dateTimePicker_NhapHoc.Size = new System.Drawing.Size(115, 26);
             this.dateTimePicker_NhapHoc.TabIndex = 10;
@@ -281,7 +294,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(811, 80);
+            this.label6.Location = new System.Drawing.Point(813, 77);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 19);
@@ -290,7 +303,7 @@
             // 
             // textBox_QueQuan
             // 
-            this.textBox_QueQuan.Location = new System.Drawing.Point(772, 31);
+            this.textBox_QueQuan.Location = new System.Drawing.Point(817, 30);
             this.textBox_QueQuan.MaxLength = 255;
             this.textBox_QueQuan.Name = "textBox_QueQuan";
             this.textBox_QueQuan.Size = new System.Drawing.Size(165, 26);
@@ -299,7 +312,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(687, 34);
+            this.label5.Location = new System.Drawing.Point(732, 33);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(78, 19);
@@ -309,14 +322,14 @@
             // dateTimePicker_NgaySinh
             // 
             this.dateTimePicker_NgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(358, 32);
+            this.dateTimePicker_NgaySinh.Location = new System.Drawing.Point(403, 31);
             this.dateTimePicker_NgaySinh.Name = "dateTimePicker_NgaySinh";
             this.dateTimePicker_NgaySinh.Size = new System.Drawing.Size(115, 26);
             this.dateTimePicker_NgaySinh.TabIndex = 3;
             // 
             // textBox_MaSinhVien
             // 
-            this.textBox_MaSinhVien.Location = new System.Drawing.Point(78, 74);
+            this.textBox_MaSinhVien.Location = new System.Drawing.Point(80, 71);
             this.textBox_MaSinhVien.MaxLength = 255;
             this.textBox_MaSinhVien.Name = "textBox_MaSinhVien";
             this.textBox_MaSinhVien.Size = new System.Drawing.Size(92, 26);
@@ -325,7 +338,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 78);
+            this.label4.Location = new System.Drawing.Point(12, 75);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 19);
@@ -334,7 +347,7 @@
             // 
             // textBox_TenSinhVien
             // 
-            this.textBox_TenSinhVien.Location = new System.Drawing.Point(117, 30);
+            this.textBox_TenSinhVien.Location = new System.Drawing.Point(162, 29);
             this.textBox_TenSinhVien.MaxLength = 255;
             this.textBox_TenSinhVien.Name = "textBox_TenSinhVien";
             this.textBox_TenSinhVien.Size = new System.Drawing.Size(137, 26);
@@ -343,7 +356,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 34);
+            this.label3.Location = new System.Drawing.Point(52, 33);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 19);
@@ -353,7 +366,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 36);
+            this.label2.Location = new System.Drawing.Point(315, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 19);
@@ -547,5 +560,6 @@
         private System.Windows.Forms.ComboBox comboBox_MaLop;
         private System.Windows.Forms.ComboBox comboBox_MaKhoa;
         private System.Windows.Forms.ComboBox comboBox_MaGiaoVien;
+        private System.Windows.Forms.Button button_Xuat;
     }
 }
